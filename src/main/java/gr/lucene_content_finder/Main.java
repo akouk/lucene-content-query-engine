@@ -67,38 +67,42 @@ public class Main {
             TopDocs topDocs = searcher.search(queryStr, numHits);
             searcher.printTopDocs(topDocs);
 
-            System.out.println("Do you want to save the search results to a directory? (Y/N)");
-            Scanner scanner2 = new Scanner(System.in);
-            String saveResults = scanner2.nextLine();
+            if (topDocs.totalHits.value > 0) {
+                System.out.println("Do you want to save the search results to a directory? (Y/N)");
+                Scanner scanner2 = new Scanner(System.in);
+                String saveResults = scanner2.nextLine();
 
-            if(saveResults.equalsIgnoreCase("Y")) {
-                System.out.println("Please enter the path to the directory where you want to store the search results:");
-                String saveDir = scanner2.nextLine();
-                String saveDirPath = System.getProperty("user.home") + saveDir;
+                if(saveResults.equalsIgnoreCase("Y")) {
+                    System.out.println("Please enter the path to the directory where you want to store the search results:");
+                    String saveDir = scanner2.nextLine();
+                    String saveDirPath = System.getProperty("user.home") + saveDir;
 
-                // Check if the directory exists, if not create it
-                File saveDirFile = new File(saveDirPath);
-                if (!saveDirFile.exists()) {
-                    saveDirFile.mkdirs();
+                    // Check if the directory exists, if not create it
+                    File saveDirFile = new File(saveDirPath);
+                    if (!saveDirFile.exists()) {
+                        saveDirFile.mkdirs();
+                    }
+
+                    // Copy each file to the new directory
+                    for (ScoreDoc scoreDoc : topDocs.scoreDocs) {
+                        int docId = scoreDoc.doc;
+                        Document document = searcher.getDocument(docId);
+                        String sourceFilePath = document.get("filepathString");
+
+                        File sourceFile = new File(sourceFilePath);
+                        String destFilePath = saveDirPath + "/" + sourceFile.getName();
+                        File destFile = new File(destFilePath);
+
+                        System.out.println("Source file path: " + sourceFilePath);
+                        Files.copy(sourceFile.toPath(), destFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                    }
+
+                    System.out.println("Files successfully stored in the directory: " + saveDirPath);
                 }
-
-                // Copy each file to the new directory
-                for (ScoreDoc scoreDoc : topDocs.scoreDocs) {
-                    int docId = scoreDoc.doc;
-                    Document document = searcher.getDocument(docId);
-                    String sourceFilePath = document.get("filepathString");
-
-                    File sourceFile = new File(sourceFilePath);
-                    String destFilePath = saveDirPath + "/" + sourceFile.getName();
-                    File destFile = new File(destFilePath);
-
-                    System.out.println("Source file path: " + sourceFilePath);
-                    Files.copy(sourceFile.toPath(), destFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
-                }
-
-                System.out.println("Files successfully stored in the directory: " + saveDirPath);
+                scanner2.close();
+            } else {
+                System.out.println("No results were found for your search.");
             }
-            scanner2.close();
 
         } catch (IOException e) {
             e.printStackTrace();

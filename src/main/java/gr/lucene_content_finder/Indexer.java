@@ -6,6 +6,9 @@ import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.index.Term;
+
+
 
 import java.io.File;
 import java.io.IOException;
@@ -24,7 +27,18 @@ public class Indexer {
     public void indexFile(File file) throws IOException {
         DocumentBuilder documentBuilder = new DocumentBuilder();
         Document document = documentBuilder.buildDocument(file);
-        writer.addDocument(document);
+
+        // Create a Term that uniquely identifies the document
+        Term term = new Term("filepathString", document.get("filepathString"));
+
+        // Update the document in the index (or add it if it's not already there)
+        writer.updateDocument(term, document);
+
+
+
+
+//
+//        writer.addDocument(document);
 //        System.out.println("Indexed file: " + file.getAbsolutePath());
     }
 

@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="81680c89-1979-4820-8a75-5ac8f76f7290" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/lucene_content_finder/Indexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/lucene_content_finder/Indexer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gr/lucene_content_finder/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/lucene_content_finder/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gr/lucene_content_finder/Searcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/lucene_content_finder/Searcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,11 +91,22 @@
       <workItem from="1683988939385" duration="140000" />
       <workItem from="1683989706760" duration="12000" />
       <workItem from="1683989727197" duration="35000" />
-      <workItem from="1683989773460" duration="2983000" />
+      <workItem from="1683989773460" duration="4507000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
