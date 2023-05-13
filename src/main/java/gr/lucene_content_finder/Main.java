@@ -21,6 +21,9 @@ public class Main {
         System.out.println("Please enter the search query:");
         String queryStr = scanner.nextLine();
 
+        System.out.println("Please enter the maximum number of search results:");
+        int numHits = scanner.nextInt();
+
         try {
             // Step 1: Initialize the indexer
             Indexer indexer = new Indexer(indexDirPath);
@@ -44,7 +47,7 @@ public class Main {
             Searcher searcher = new Searcher(indexDirPath);
 
             // Step 4: Search the index
-            TopDocs topDocs = searcher.search(queryStr, 10);
+            TopDocs topDocs = searcher.search(queryStr, numHits);
             searcher.printTopDocs(topDocs);
         } catch (IOException e) {
             e.printStackTrace();
