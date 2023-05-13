@@ -21,8 +21,8 @@ public class Main {
         System.out.println("Please enter the search query:");
         String queryStr = scanner.nextLine();
 
-        System.out.println("Please enter the maximum number of search results:");
-        int numHits = scanner.nextInt();
+//        System.out.println("Please enter the maximum number of search results:");
+//        int numHits = scanner.nextInt();
 
         try {
             // Step 1: Initialize the indexer
@@ -41,6 +41,18 @@ public class Main {
             }
 
             indexer.close();
+
+            int maxFiles = (files != null) ? files.length : 0;
+
+            int numHits;
+            while (true) {
+                System.out.println("Please enter the maximum number of search results:");
+                numHits = scanner.nextInt();
+                if (numHits <= maxFiles) {
+                    break;
+                }
+                System.out.println("The number of results cannot be greater than the number of files. Please enter a number less than or equal to " + maxFiles);
+            }
 
 
             // Step 3: Initialize the searcher
