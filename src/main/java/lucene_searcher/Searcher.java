@@ -1,4 +1,4 @@
-package gr.lucene_content_finder;
+package lucene_searcher;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.index.DirectoryReader;

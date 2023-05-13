@@ -1,4 +1,4 @@
-package gr.lucene_content_finder;
+package lucene_utilities;
 
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.StringField;
@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 
-public class DocumentBuilder {
+public class LuceneDocumentBuilder {
     public Document buildDocument(File file) throws IOException {
         Document document = new Document();
 

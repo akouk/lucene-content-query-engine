@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81680c89-1979-4820-8a75-5ac8f76f7290" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gr/lucene_content_finder/Indexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/lucene_content_finder/Indexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/lucene_content_finder/DocumentBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_utilities/LuceneDocumentBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/lucene_content_finder/Indexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_indexer/Indexer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gr/lucene_content_finder/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gr/lucene_content_finder/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gr/lucene_content_finder/Searcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_searcher/Searcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +37,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -49,7 +53,7 @@
       <module name="lucene-content-query-finder" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gr.lucene_content_finder.*" />
+          <option name="PATTERN" value="lucene_indexer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,7 +95,7 @@
       <workItem from="1683988939385" duration="140000" />
       <workItem from="1683989706760" duration="12000" />
       <workItem from="1683989727197" duration="35000" />
-      <workItem from="1683989773460" duration="4507000" />
+      <workItem from="1683989773460" duration="6175000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,9 @@
-package gr.lucene_content_finder; // Defines the package of the class
+package lucene_main; // Defines the package of the class
+
+import lucene_indexer.Indexer;
+import lucene_searcher.Searcher;
+import lucene_utilities.SearchResultPrinter;
+
 
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.search.ScoreDoc;
@@ -9,8 +14,6 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
 public class Main {
@@ -65,7 +68,9 @@ public class Main {
 
             // Step 4: Search the index
             TopDocs topDocs = searcher.search(queryStr, numHits);
-            searcher.printTopDocs(topDocs);
+            SearchResultPrinter printer = new SearchResultPrinter();
+            printer.printTopDocs(topDocs, searcher);
+//            searcher.printTopDocs(topDocs);
 
             if (topDocs.totalHits.value > 0) {
                 System.out.println("Do you want to save the search results to a directory? (Y/N)");
@@ -109,8 +114,6 @@ public class Main {
         } catch (org.apache.lucene.queryparser.classic.ParseException e) {
             e.printStackTrace();
         }
-
-
         scanner.close();
     }
 }

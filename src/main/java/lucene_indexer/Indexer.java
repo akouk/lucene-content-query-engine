@@ -1,5 +1,6 @@
-package gr.lucene_content_finder;
+package lucene_indexer;
 
+import lucene_utilities.LuceneDocumentBuilder;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.IndexWriter;
@@ -7,8 +8,6 @@ import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.index.Term;
-
-
 
 import java.io.File;
 import java.io.IOException;
@@ -25,7 +24,7 @@ public class Indexer {
     }
 
     public void indexFile(File file) throws IOException {
-        DocumentBuilder documentBuilder = new DocumentBuilder();
+        LuceneDocumentBuilder documentBuilder = new LuceneDocumentBuilder();
         Document document = documentBuilder.buildDocument(file);
 
         // Create a Term that uniquely identifies the document
@@ -33,12 +32,6 @@ public class Indexer {
 
         // Update the document in the index (or add it if it's not already there)
         writer.updateDocument(term, document);
-
-
-
-
-//
-//        writer.addDocument(document);
 //        System.out.println("Indexed file: " + file.getAbsolutePath());
     }
 
