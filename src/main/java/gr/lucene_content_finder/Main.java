@@ -1,9 +1,17 @@
 package gr.lucene_content_finder; // Defines the package of the class
 
 import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.document.Document;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 
 public class Main {
 
@@ -20,9 +28,6 @@ public class Main {
 
         System.out.println("Please enter the search query:");
         String queryStr = scanner.nextLine();
-
-//        System.out.println("Please enter the maximum number of search results:");
-//        int numHits = scanner.nextInt();
 
         try {
             // Step 1: Initialize the indexer
@@ -61,11 +66,46 @@ public class Main {
             // Step 4: Search the index
             TopDocs topDocs = searcher.search(queryStr, numHits);
             searcher.printTopDocs(topDocs);
+
+            System.out.println("Do you want to save the search results to a directory? (Y/N)");
+            Scanner scanner2 = new Scanner(System.in);
+            String saveResults = scanner2.nextLine();
+
+            if(saveResults.equalsIgnoreCase("Y")) {
+                System.out.println("Please enter the path to the directory where you want to store the search results:");
+                String saveDir = scanner2.nextLine();
+                String saveDirPath = System.getProperty("user.home") + saveDir;
+
+                // Check if the directory exists, if not create it
+                File saveDirFile = new File(saveDirPath);
+                if (!saveDirFile.exists()) {
+                    saveDirFile.mkdirs();
+                }
+
+                // Copy each file to the new directory
+                for (ScoreDoc scoreDoc : topDocs.scoreDocs) {
+                    int docId = scoreDoc.doc;
+                    Document document = searcher.getDocument(docId);
+                    String sourceFilePath = document.get("filepathString");
+
+                    File sourceFile = new File(sourceFilePath);
+                    String destFilePath = saveDirPath + "/" + sourceFile.getName();
+                    File destFile = new File(destFilePath);
+
+                    System.out.println("Source file path: " + sourceFilePath);
+                    Files.copy(sourceFile.toPath(), destFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                }
+
+                System.out.println("Files successfully stored in the directory: " + saveDirPath);
+            }
+            scanner2.close();
+
         } catch (IOException e) {
             e.printStackTrace();
         } catch (org.apache.lucene.queryparser.classic.ParseException e) {
             e.printStackTrace();
         }
+
 
         scanner.close();
     }

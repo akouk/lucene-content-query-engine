@@ -47,4 +47,9 @@ public class Searcher {
             System.out.println("File Path: " + filePath);
         }
     }
+
+    public Document getDocument(int docId) throws IOException {
+        return searcher.doc(docId);
+    }
+
 }
