@@ -1,6 +1,7 @@
 package lucene_indexer;
 
 import lucene_utilities.LuceneDocumentBuilder;
+
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.IndexWriter;

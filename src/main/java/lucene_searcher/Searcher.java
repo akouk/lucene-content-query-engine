@@ -6,7 +6,6 @@ import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
-import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
@@ -34,22 +33,7 @@ public class Searcher {
         return searcher.search(query, numHits);
     }
 
-    public void printTopDocs(TopDocs topDocs) throws IOException {
-        ScoreDoc[] hits = topDocs.scoreDocs;
-        System.out.println("Number of hits: " + hits.length);
-
-        for (ScoreDoc scoreDoc : topDocs.scoreDocs) {
-            int docId = scoreDoc.doc;
-            Document document = searcher.doc(docId);
-            String filePath = document.get("filepathString");
-            System.out.println("Score: " + scoreDoc.score);
-            System.out.println("Document ID: " + docId);
-            System.out.println("File Path: " + filePath);
-        }
-    }
-
     public Document getDocument(int docId) throws IOException {
         return searcher.doc(docId);
     }
-
 }
