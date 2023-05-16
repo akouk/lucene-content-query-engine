@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81680c89-1979-4820-8a75-5ac8f76f7290" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_handlers/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_handlers/FileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_services/IndexService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_services/IndexService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_services/ResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_services/ResultService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_services/UserInteractionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_utilities/UserInteraction.java" afterDir="false" />
-    </list>
+    <list default="true" id="81680c89-1979-4820-8a75-5ac8f76f7290" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +102,7 @@
       <workItem from="1683988939385" duration="140000" />
       <workItem from="1683989706760" duration="12000" />
       <workItem from="1683989727197" duration="35000" />
-      <workItem from="1683989773460" duration="16390000" />
+      <workItem from="1683989773460" duration="16741000" />
     </task>
     <servers />
   </component>
