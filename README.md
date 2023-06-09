@@ -6,8 +6,8 @@ This project is a simple content query engine built using Apache Lucene. It allo
 
 Before you begin, ensure you have installed the followings:
 
-- a compatible version of Java (Java 11 or later is recommended).
-- Apache Maven to manage project dependencies.
+- a compatible version of Java (Java 11 or later is recommended)
+- Apache Maven to manage project dependencies
 
 ## Getting Started
 ### Cloning the Project
