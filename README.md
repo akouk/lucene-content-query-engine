@@ -2,7 +2,7 @@
 ## Description
 
 This project is a simple content query engine built using Apache Lucene. It allows you to index files from a specified directory and then perform search queries on the indexed content. You can choose how many results you want to see, and optionally save the results to a directory.
-## Prerequisites
+## Requirements
 
 Before you begin, ensure you have met the following requirements:
 
