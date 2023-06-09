@@ -31,4 +31,5 @@ public class UserInputHandler {
     public void close() {
         scanner.close();
     }
+
 }

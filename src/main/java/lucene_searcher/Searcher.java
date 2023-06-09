@@ -36,4 +36,5 @@ public class Searcher {
     public Document getDocument(int docId) throws IOException {
         return searcher.doc(docId);
     }
+
 }

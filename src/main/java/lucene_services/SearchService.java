@@ -19,4 +19,5 @@ public class SearchService {
     public Searcher getSearcher() {
         return this.searcher;
     }
+
 }

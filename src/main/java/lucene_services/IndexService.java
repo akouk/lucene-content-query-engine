@@ -33,4 +33,5 @@ public class IndexService {
 
         return this.indexedFilesCount;
     }
+
 }

@@ -39,4 +39,5 @@ public class Indexer {
     public void close() throws IOException {
         writer.close();
     }
+
 }

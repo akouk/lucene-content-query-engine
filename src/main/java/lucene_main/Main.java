@@ -42,5 +42,6 @@ public class Main {
         } catch (org.apache.lucene.queryparser.classic.ParseException e) {
             e.printStackTrace();
         }
+
     }
 }

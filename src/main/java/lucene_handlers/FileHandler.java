@@ -22,21 +22,4 @@ public class FileHandler {
             directoryFile.mkdirs();
         }
     }
-
-//    public static void deleteDirectoryIfExists(String directoryPath) throws IOException {
-//        Path pathToBeDeleted = Paths.get(directoryPath);
-//
-//        if (Files.exists(pathToBeDeleted)) {
-//            Files.walk(pathToBeDeleted)
-//                    .sorted(Comparator.reverseOrder())
-//                    .forEach(path -> {
-//                        try {
-//                            Files.delete(path);
-//                        } catch (IOException e) {
-//                            // log the exception
-//                        }
-//                    });
-//        }
-//    }
-
 }

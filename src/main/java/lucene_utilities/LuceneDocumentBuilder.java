@@ -24,4 +24,5 @@ public class LuceneDocumentBuilder {
 
         return document;
     }
+
 }

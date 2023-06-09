@@ -33,4 +33,5 @@ public class UserInteraction {
     public String getSaveDirPath() {
         return userInputHandler.getInput("Please enter the path to the directory where you want to store the search results:");
     }
+
 }

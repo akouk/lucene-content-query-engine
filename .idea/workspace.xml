@@ -6,7 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="81680c89-1979-4820-8a75-5ac8f76f7290" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_handlers/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_handlers/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_handlers/SearchResultHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_handlers/SearchResultHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_handlers/UserInputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_handlers/UserInputHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_indexer/Indexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_indexer/Indexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_searcher/Searcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_searcher/Searcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_services/IndexService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_services/IndexService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_services/ResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_services/ResultService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_services/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_services/SearchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_utilities/LuceneDocumentBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_utilities/LuceneDocumentBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_utilities/SearchResultPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_utilities/SearchResultPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucene_utilities/UserInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucene_utilities/UserInteraction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,20 +43,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.lucene_main.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gr.lucene_content_finder.Main" />
@@ -108,7 +119,10 @@
       <workItem from="1683988939385" duration="140000" />
       <workItem from="1683989706760" duration="12000" />
       <workItem from="1683989727197" duration="35000" />
-      <workItem from="1683989773460" duration="17787000" />
+      <workItem from="1683989773460" duration="21800000" />
+      <workItem from="1685127392799" duration="1095000" />
+      <workItem from="1685139215653" duration="830000" />
+      <workItem from="1686341314166" duration="383000" />
     </task>
     <servers />
   </component>

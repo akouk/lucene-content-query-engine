@@ -34,5 +34,6 @@ public class ResultService {
             System.out.println("No results were found for your search.");
         }
     }
+
 }
 
